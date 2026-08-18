@@ -802,7 +802,7 @@
 
     <!-- Video Container -->
     <div id="screen-video">
-        <video id="surprise-video" src="ezgif-3e75b639968e561c.mp4" playsinline muted loop autoplay></video>
+        <video id="surprise-video" src="ezgif-3e75b639968e561c.mp4" playsinline muted loop></video>
     </div>
 
     <script>
@@ -1304,6 +1304,8 @@
                 const videoScreen = document.getElementById('screen-video');
                 
                 videoScreen.classList.add('show');
+
+                surpriseVideo.currentTime = 0; 
                 surpriseVideo.play().catch(e => {
                     console.log("Video Play Error:", e);
                     surpriseVideo.muted = true;
